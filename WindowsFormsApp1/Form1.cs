@@ -43,9 +43,44 @@ namespace WindowsFormsApp1
             orszagok_combobox_update();
             numericUpDown1_Szuletett.Maximum = (decimal)DateTime.Now.Year;
             Befizetesek_tabla_create();
+            Befizetesek_table_update();
+        }
+        private void Befizetesek_table_update()
+        {
+            sql.CommandText = "SELECT ugyfel.nev, ugyfel.azon, befiz.datum, befiz.osszeg From ugyfel JOIN befiz USING (azon) WHERE 1";
+            try
+            {
+                using (MySqlDataReader dr=sql.ExecuteReader())
+                {
+                    dataGridView1_Befizetesek.Rows.Clear();
+                    while(dr.Read())
+                    {
+                        int index = dataGridView1_Befizetesek.Rows.Add();
+                        DataGridViewRow ujSor = dataGridView1_Befizetesek.Rows[index];
+                        ujSor.Cells["azon"].Value = dr.GetInt32("azon");
+                        ujSor.Cells["nev"].Value = dr.GetString("nev");
+                        ujSor.Cells["datum"].Value = dr.GetDateTime("datum");
+                        ujSor.Cells["osszeg"].Value = dr.GetInt32("osszeg");
+                    }
+                }
+            }
+            catch (MySqlException myex)
+            {
+                MessageBox.Show(myex.Message);
+                return;
+                throw;
+            }
         }
         private void Befizetesek_tabla_create()
         {
+            dataGridView1_Befizetesek.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1_Befizetesek.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //--Fejléc megváltoztatása--
+            dataGridView1_Befizetesek.EnableHeadersVisualStyles = false;
+            dataGridView1_Befizetesek.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1_Befizetesek.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dataGridView1_Befizetesek.ColumnHeadersDefaultCellStyle.ForeColor = Color.Yellow;
+            dataGridView1_Befizetesek.ColumnHeadersDefaultCellStyle.Font = new Font(this.Font, FontStyle.Bold);
             //Datagrid oszloponkénti létrehozása
             DataGridViewColumn col_id = new DataGridViewColumn();
             {
@@ -64,12 +99,14 @@ namespace WindowsFormsApp1
             {
                 col_datum.Name = "datum";
                 col_datum.HeaderText = "Befizetes ideje";
+                col_datum.ValueType = typeof(DateTime);
                 col_datum.CellTemplate = new DataGridViewTextBoxCell();
             }
             DataGridViewColumn col_osszeg = new DataGridViewColumn();
             {
                 col_osszeg.Name = "osszeg";
                 col_osszeg.HeaderText = "Befizetett összeg";
+                col_osszeg.ValueType = typeof(int);
                 col_osszeg.CellTemplate = new DataGridViewTextBoxCell();
             }
             dataGridView1_Befizetesek.Columns.Add(col_id);
@@ -235,6 +272,43 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
                 return;
             }
+        }
+
+        private void button1_Rogzitess_Click(object sender, EventArgs e)
+        {
+            if (comboBox1_Tagok.SelectedIndex<0)
+            {
+                MessageBox.Show("Válasszon egy tagot", "hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                comboBox1_Tagok.Focus();
+                return;
+            }
+            if (numericUpDown1_Osszeg.Value<1)
+            {
+                MessageBox.Show("Addjon meg egy összeget!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                numericUpDown1_Osszeg.Focus();
+                return;
+            }
+            Ugyfel u = (Ugyfel)comboBox1_Tagok.SelectedItem;
+            sql.CommandText =$"INSERT INTO `befiz`( `azon`,`datum`, `osszeg`) VALUES ('{u.Id}','{dateTimePicker1.Value.ToString("yyyy-MM-dd")}','{numericUpDown1_Osszeg.Value.ToString()}')";
+            try
+            {
+                sql.ExecuteNonQuery();
+                Befizetesek_table_update();
+            }
+            catch (MySqlException myex)
+            {
+                MessageBox.Show(myex.Message);
+                return;
+            }
+            
+        }
+
+        private void RekordAdatainakbetoltese(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow rekord = dataGridView1_Befizetesek.SelectedRows[0];
+            comboBox1_Tagok.Text = rekord.Cells["nev"].Value.ToString();
+            numericUpDown1_Osszeg.Value = decimal.Parse(rekord.Cells["osszeg"].Value.ToString());
+            dateTimePicker1.Value = (DateTime)rekord.Cells["datum"].Value;
         }
     }
 }

@@ -31,38 +31,39 @@ namespace WindowsFormsApp1
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox1_Tagok = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1_Azon = new System.Windows.Forms.TextBox();
-            this.textBox2_Nev = new System.Windows.Forms.TextBox();
-            this.numericUpDown1_Szuletett = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2_Irszam = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1_Orszag = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1_Uj = new System.Windows.Forms.Button();
-            this.button2_modositas = new System.Windows.Forms.Button();
             this.button3_Torles = new System.Windows.Forms.Button();
-            this.comboBox1_Tagok = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1_Rogzites = new System.Windows.Forms.Button();
-            this.button2_Torles = new System.Windows.Forms.Button();
+            this.button2_modositas = new System.Windows.Forms.Button();
+            this.button1_Uj = new System.Windows.Forms.Button();
+            this.comboBox1_Orszag = new System.Windows.Forms.ComboBox();
+            this.numericUpDown2_Irszam = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1_Szuletett = new System.Windows.Forms.NumericUpDown();
+            this.textBox2_Nev = new System.Windows.Forms.TextBox();
+            this.textBox1_Azon = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBox1_Tagok = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1_Befizetesek = new System.Windows.Forms.DataGridView();
+            this.button2_Torless = new System.Windows.Forms.Button();
+            this.button1_Rogzitess = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1_Tagok = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown1_Osszeg = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1_Szuletett)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2_Irszam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1_Szuletett)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Befizetesek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1_Osszeg)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -88,35 +89,6 @@ namespace WindowsFormsApp1
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridView1_Befizetesek);
-            this.tabPage2.Controls.Add(this.button2_Torles);
-            this.tabPage2.Controls.Add(this.button1_Rogzites);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.comboBox1_Tagok);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 421);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // listBox1_Tagok
-            // 
-            this.listBox1_Tagok.FormattingEnabled = true;
-            this.listBox1_Tagok.ItemHeight = 16;
-            this.listBox1_Tagok.Location = new System.Drawing.Point(26, 18);
-            this.listBox1_Tagok.Name = "listBox1_Tagok";
-            this.listBox1_Tagok.Size = new System.Drawing.Size(120, 324);
-            this.listBox1_Tagok.TabIndex = 0;
-            this.listBox1_Tagok.SelectedIndexChanged += new System.EventHandler(this.listBox1_Tagok_SelectedIndexChanged);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button3_Torles);
@@ -139,87 +111,43 @@ namespace WindowsFormsApp1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kivalasztott Tag";
             // 
-            // label1
+            // button3_Torles
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "azon:";
+            this.button3_Torles.Location = new System.Drawing.Point(453, 257);
+            this.button3_Torles.Name = "button3_Torles";
+            this.button3_Torles.Size = new System.Drawing.Size(75, 23);
+            this.button3_Torles.TabIndex = 12;
+            this.button3_Torles.Text = "Torles";
+            this.button3_Torles.UseVisualStyleBackColor = true;
+            this.button3_Torles.Click += new System.EventHandler(this.button3_Torles_Click);
             // 
-            // label2
+            // button2_modositas
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "nev:";
+            this.button2_modositas.Location = new System.Drawing.Point(278, 257);
+            this.button2_modositas.Name = "button2_modositas";
+            this.button2_modositas.Size = new System.Drawing.Size(75, 23);
+            this.button2_modositas.TabIndex = 11;
+            this.button2_modositas.Text = "Modositas";
+            this.button2_modositas.UseVisualStyleBackColor = true;
+            this.button2_modositas.Click += new System.EventHandler(this.button2_modositas_Click);
             // 
-            // label3
+            // button1_Uj
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "szüleév:";
+            this.button1_Uj.Location = new System.Drawing.Point(98, 257);
+            this.button1_Uj.Name = "button1_Uj";
+            this.button1_Uj.Size = new System.Drawing.Size(75, 23);
+            this.button1_Uj.TabIndex = 10;
+            this.button1_Uj.Text = "ÚJ";
+            this.button1_Uj.UseVisualStyleBackColor = true;
+            this.button1_Uj.Click += new System.EventHandler(this.button1_Uj_Click);
             // 
-            // label4
+            // comboBox1_Orszag
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "irszam:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Orszag:";
-            // 
-            // textBox1_Azon
-            // 
-            this.textBox1_Azon.Location = new System.Drawing.Point(88, 26);
-            this.textBox1_Azon.Name = "textBox1_Azon";
-            this.textBox1_Azon.ReadOnly = true;
-            this.textBox1_Azon.Size = new System.Drawing.Size(100, 22);
-            this.textBox1_Azon.TabIndex = 5;
-            // 
-            // textBox2_Nev
-            // 
-            this.textBox2_Nev.Location = new System.Drawing.Point(88, 63);
-            this.textBox2_Nev.Name = "textBox2_Nev";
-            this.textBox2_Nev.Size = new System.Drawing.Size(100, 22);
-            this.textBox2_Nev.TabIndex = 6;
-            // 
-            // numericUpDown1_Szuletett
-            // 
-            this.numericUpDown1_Szuletett.Location = new System.Drawing.Point(91, 103);
-            this.numericUpDown1_Szuletett.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numericUpDown1_Szuletett.Minimum = new decimal(new int[] {
-            1900,
-            0,
-            0,
-            0});
-            this.numericUpDown1_Szuletett.Name = "numericUpDown1_Szuletett";
-            this.numericUpDown1_Szuletett.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1_Szuletett.TabIndex = 7;
-            this.numericUpDown1_Szuletett.Value = new decimal(new int[] {
-            1900,
-            0,
-            0,
-            0});
+            this.comboBox1_Orszag.FormattingEnabled = true;
+            this.comboBox1_Orszag.Location = new System.Drawing.Point(98, 178);
+            this.comboBox1_Orszag.Name = "comboBox1_Orszag";
+            this.comboBox1_Orszag.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1_Orszag.TabIndex = 9;
             // 
             // numericUpDown2_Irszam
             // 
@@ -243,111 +171,116 @@ namespace WindowsFormsApp1
             0,
             0});
             // 
-            // comboBox1_Orszag
+            // numericUpDown1_Szuletett
             // 
-            this.comboBox1_Orszag.FormattingEnabled = true;
-            this.comboBox1_Orszag.Location = new System.Drawing.Point(98, 178);
-            this.comboBox1_Orszag.Name = "comboBox1_Orszag";
-            this.comboBox1_Orszag.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1_Orszag.TabIndex = 9;
+            this.numericUpDown1_Szuletett.Location = new System.Drawing.Point(91, 103);
+            this.numericUpDown1_Szuletett.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1_Szuletett.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
+            this.numericUpDown1_Szuletett.Name = "numericUpDown1_Szuletett";
+            this.numericUpDown1_Szuletett.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown1_Szuletett.TabIndex = 7;
+            this.numericUpDown1_Szuletett.Value = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             // 
-            // label6
+            // textBox2_Nev
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(230, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "AZON:";
+            this.textBox2_Nev.Location = new System.Drawing.Point(88, 63);
+            this.textBox2_Nev.Name = "textBox2_Nev";
+            this.textBox2_Nev.Size = new System.Drawing.Size(100, 22);
+            this.textBox2_Nev.TabIndex = 6;
             // 
-            // label7
+            // textBox1_Azon
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(243, 70);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 17);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Datum:";
+            this.textBox1_Azon.Location = new System.Drawing.Point(88, 26);
+            this.textBox1_Azon.Name = "textBox1_Azon";
+            this.textBox1_Azon.ReadOnly = true;
+            this.textBox1_Azon.Size = new System.Drawing.Size(100, 22);
+            this.textBox1_Azon.TabIndex = 5;
             // 
-            // label8
+            // label5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(233, 115);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 17);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Osszeg";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 187);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Orszag:";
             // 
-            // button1_Uj
+            // label4
             // 
-            this.button1_Uj.Location = new System.Drawing.Point(98, 257);
-            this.button1_Uj.Name = "button1_Uj";
-            this.button1_Uj.Size = new System.Drawing.Size(75, 23);
-            this.button1_Uj.TabIndex = 10;
-            this.button1_Uj.Text = "ÚJ";
-            this.button1_Uj.UseVisualStyleBackColor = true;
-            this.button1_Uj.Click += new System.EventHandler(this.button1_Uj_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "irszam:";
             // 
-            // button2_modositas
+            // label3
             // 
-            this.button2_modositas.Location = new System.Drawing.Point(278, 257);
-            this.button2_modositas.Name = "button2_modositas";
-            this.button2_modositas.Size = new System.Drawing.Size(75, 23);
-            this.button2_modositas.TabIndex = 11;
-            this.button2_modositas.Text = "Modositas";
-            this.button2_modositas.UseVisualStyleBackColor = true;
-            this.button2_modositas.Click += new System.EventHandler(this.button2_modositas_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "szüleév:";
             // 
-            // button3_Torles
+            // label2
             // 
-            this.button3_Torles.Location = new System.Drawing.Point(453, 257);
-            this.button3_Torles.Name = "button3_Torles";
-            this.button3_Torles.Size = new System.Drawing.Size(75, 23);
-            this.button3_Torles.TabIndex = 12;
-            this.button3_Torles.Text = "Torles";
-            this.button3_Torles.UseVisualStyleBackColor = true;
-            this.button3_Torles.Click += new System.EventHandler(this.button3_Torles_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "nev:";
             // 
-            // comboBox1_Tagok
+            // label1
             // 
-            this.comboBox1_Tagok.FormattingEnabled = true;
-            this.comboBox1_Tagok.Location = new System.Drawing.Point(350, 15);
-            this.comboBox1_Tagok.Name = "comboBox1_Tagok";
-            this.comboBox1_Tagok.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1_Tagok.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "azon:";
             // 
-            // dateTimePicker1
+            // listBox1_Tagok
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(334, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.listBox1_Tagok.FormattingEnabled = true;
+            this.listBox1_Tagok.ItemHeight = 16;
+            this.listBox1_Tagok.Location = new System.Drawing.Point(26, 18);
+            this.listBox1_Tagok.Name = "listBox1_Tagok";
+            this.listBox1_Tagok.Size = new System.Drawing.Size(120, 324);
+            this.listBox1_Tagok.TabIndex = 0;
+            this.listBox1_Tagok.SelectedIndexChanged += new System.EventHandler(this.listBox1_Tagok_SelectedIndexChanged);
             // 
-            // comboBox2
+            // tabPage2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(350, 115);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 9;
-            // 
-            // button1_Rogzites
-            // 
-            this.button1_Rogzites.Location = new System.Drawing.Point(374, 163);
-            this.button1_Rogzites.Name = "button1_Rogzites";
-            this.button1_Rogzites.Size = new System.Drawing.Size(75, 23);
-            this.button1_Rogzites.TabIndex = 10;
-            this.button1_Rogzites.Text = "Rögzités";
-            this.button1_Rogzites.UseVisualStyleBackColor = true;
-            // 
-            // button2_Torles
-            // 
-            this.button2_Torles.Location = new System.Drawing.Point(388, 218);
-            this.button2_Torles.Name = "button2_Torles";
-            this.button2_Torles.Size = new System.Drawing.Size(75, 23);
-            this.button2_Torles.TabIndex = 11;
-            this.button2_Torles.Text = "Törlés";
-            this.button2_Torles.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.numericUpDown1_Osszeg);
+            this.tabPage2.Controls.Add(this.dataGridView1_Befizetesek);
+            this.tabPage2.Controls.Add(this.button2_Torless);
+            this.tabPage2.Controls.Add(this.button1_Rogzitess);
+            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.comboBox1_Tagok);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(792, 421);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1_Befizetesek
             // 
@@ -359,8 +292,92 @@ namespace WindowsFormsApp1
             this.dataGridView1_Befizetesek.ReadOnly = true;
             this.dataGridView1_Befizetesek.RowHeadersWidth = 51;
             this.dataGridView1_Befizetesek.RowTemplate.Height = 24;
-            this.dataGridView1_Befizetesek.Size = new System.Drawing.Size(219, 324);
+            this.dataGridView1_Befizetesek.Size = new System.Drawing.Size(460, 324);
             this.dataGridView1_Befizetesek.TabIndex = 12;
+            this.dataGridView1_Befizetesek.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RekordAdatainakbetoltese);
+            // 
+            // button2_Torless
+            // 
+            this.button2_Torless.Location = new System.Drawing.Point(609, 224);
+            this.button2_Torless.Name = "button2_Torless";
+            this.button2_Torless.Size = new System.Drawing.Size(75, 23);
+            this.button2_Torless.TabIndex = 11;
+            this.button2_Torless.Text = "Törlés";
+            this.button2_Torless.UseVisualStyleBackColor = true;
+            // 
+            // button1_Rogzitess
+            // 
+            this.button1_Rogzitess.Location = new System.Drawing.Point(595, 169);
+            this.button1_Rogzitess.Name = "button1_Rogzitess";
+            this.button1_Rogzitess.Size = new System.Drawing.Size(75, 23);
+            this.button1_Rogzitess.TabIndex = 10;
+            this.button1_Rogzitess.Text = "Rögzités";
+            this.button1_Rogzitess.UseVisualStyleBackColor = true;
+            this.button1_Rogzitess.Click += new System.EventHandler(this.button1_Rogzitess_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(555, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // comboBox1_Tagok
+            // 
+            this.comboBox1_Tagok.FormattingEnabled = true;
+            this.comboBox1_Tagok.Location = new System.Drawing.Point(571, 21);
+            this.comboBox1_Tagok.Name = "comboBox1_Tagok";
+            this.comboBox1_Tagok.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1_Tagok.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(495, 121);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 17);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Osszeg";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(495, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 17);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Datum:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(495, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "NEV2:";
+            // 
+            // numericUpDown1_Osszeg
+            // 
+            this.numericUpDown1_Osszeg.Location = new System.Drawing.Point(571, 121);
+            this.numericUpDown1_Osszeg.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numericUpDown1_Osszeg.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown1_Osszeg.Name = "numericUpDown1_Osszeg";
+            this.numericUpDown1_Osszeg.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown1_Osszeg.TabIndex = 13;
+            this.numericUpDown1_Osszeg.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // Form1
             // 
@@ -373,13 +390,14 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1_Szuletett)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2_Irszam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1_Szuletett)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Befizetesek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1_Osszeg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,10 +427,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button3_Torles;
         private System.Windows.Forms.ComboBox comboBox1_Tagok;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2_Torles;
-        private System.Windows.Forms.Button button1_Rogzites;
+        private System.Windows.Forms.Button button2_Torless;
+        private System.Windows.Forms.Button button1_Rogzitess;
         private System.Windows.Forms.DataGridView dataGridView1_Befizetesek;
+        private System.Windows.Forms.NumericUpDown numericUpDown1_Osszeg;
     }
 }
 

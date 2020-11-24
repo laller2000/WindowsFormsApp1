@@ -7,5 +7,12 @@
       <FileName>Ugyfel.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="WindowsFormsApp1.Befizetes">
+    <Position X="5.75" Y="0.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAiAAAAIgA=</HashCode>
+      <FileName>Befizetes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
